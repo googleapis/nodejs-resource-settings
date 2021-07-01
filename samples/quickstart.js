@@ -27,7 +27,6 @@ async function main(projectId) {
   // Creates a client
   const client = new ResourceSettingsServiceClient();
 
-  //TODO(library generator): write the actual function you will be testing
   async function listSettings() {
     const settings = await client.listSettings({
       parent: `projects/${projectId}`,

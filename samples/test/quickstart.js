@@ -44,3 +44,4 @@ describe('Quickstart', () => {
     const stdout = execSync(`node ./quickstart.js ${projectId}`, {cwd});
     assert.match(stdout, /\[.*\]/);
   });
+});
