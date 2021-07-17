@@ -17,7 +17,7 @@
 // ** All changes to this file may be overwritten. **
 
 /* eslint-disable node/no-missing-require, no-unused-vars */
-const resourcesettings = require('@google-cloud/resource-settings');
+const resourcesettings = require('@google-cloud/resourcesettings');
 
 function main() {
   const resourceSettingsServiceClient =
