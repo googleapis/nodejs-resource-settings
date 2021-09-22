@@ -12,43 +12,38 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name) {
-  // [START resourcesettings_get_setting_sample]
+function main(setting) {
+  // [START resourcesettings_update_setting_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
-   *  requirements.
+   *  Required. The setting to update. See [Setting][google.cloud.resourcesettings.v1.Setting] for field requirements.
    */
-  // const name = 'abc123'
-  /**
-   *  The SettingView for this request.
-   */
-  // const view = ''
+  // const setting = ''
 
   // Imports the Resourcesettings library
-  const {ResourceSettingsServiceClient} = require('@google-cloud/resource-settings').v1;
+  const {ResourceSettingsServiceClient} =
+    require('@google-cloud/resource-settings').v1;
 
   // Instantiates a client
   const resourcesettingsClient = new ResourceSettingsServiceClient();
 
-  async function getSetting() {
+  async function updateSetting() {
     // Construct request
     const request = {
-      name,
+      setting,
     };
 
     // Run request
-    const response = await resourcesettingsClient.getSetting(request);
+    const response = await resourcesettingsClient.updateSetting(request);
     console.log(response);
   }
 
-  getSetting();
-  // [END resourcesettings_get_setting_sample]
+  updateSetting();
+  // [END resourcesettings_update_setting_sample]
 }
 
 process.on('unhandledRejection', err => {
