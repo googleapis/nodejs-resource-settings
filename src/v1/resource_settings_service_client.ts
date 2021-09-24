@@ -687,7 +687,8 @@ export class ResourceSettingsServiceClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listSettings'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listSettings.createStream(
       this.innerApiCalls.listSettings as gax.GaxCall,
@@ -745,7 +746,8 @@ export class ResourceSettingsServiceClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listSettings'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listSettings.asyncIterate(
       this.innerApiCalls['listSettings'] as GaxCall,

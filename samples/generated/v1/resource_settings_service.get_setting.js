@@ -12,57 +12,43 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(parent) {
-  // [START resourcesettings_v1_generated_ResourceSettingsService_ListSettings_async]
+function main(name) {
+  // [START resourcesettings_v1_generated_ResourceSettingsService_GetSetting_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The Cloud resource that parents the setting. Must be in one of the
-   *  following forms:
-   *  * `projects/{project_number}`
-   *  * `projects/{project_id}`
-   *  * `folders/{folder_id}`
-   *  * `organizations/{organization_id}`
+   *  Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+   *  requirements.
    */
-  // const parent = 'abc123'
-  /**
-   *  Unused. The size of the page to be returned.
-   */
-  // const pageSize = 1234
-  /**
-   *  Unused. A page token used to retrieve the next page.
-   */
-  // const pageToken = 'abc123'
+  // const name = 'abc123'
   /**
    *  The SettingView for this request.
    */
   // const view = ''
 
   // Imports the Resourcesettings library
-  const {ResourceSettingsServiceClient} = require('@google-cloud/resource-settings').v1;
+  const {ResourceSettingsServiceClient} =
+    require('@google-cloud/resource-settings').v1;
 
   // Instantiates a client
   const resourcesettingsClient = new ResourceSettingsServiceClient();
 
-  async function listSettings() {
+  async function getSetting() {
     // Construct request
     const request = {
-      parent,
+      name,
     };
 
     // Run request
-    const iterable = await resourcesettingsClient.listSettingsAsync(request);
-    for await (const response of iterable) {
-        console.log(response);
-    }
+    const response = await resourcesettingsClient.getSetting(request);
+    console.log(response);
   }
 
-  listSettings();
-  // [END resourcesettings_v1_generated_ResourceSettingsService_ListSettings_async]
+  getSetting();
+  // [END resourcesettings_v1_generated_ResourceSettingsService_GetSetting_async]
 }
 
 process.on('unhandledRejection', err => {
