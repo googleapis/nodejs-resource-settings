@@ -4,7 +4,7 @@
 
 # [Resource Settings API: Node.js Client](https://github.com/googleapis/nodejs-resource-settings)
 
-
+[![release level](https://img.shields.io/badge/release%20level-general%20availability%20%28GA%29-brightgreen.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
 [![npm version](https://img.shields.io/npm/v/@google-cloud/resource-settings.svg)](https://www.npmjs.org/package/@google-cloud/resource-settings)
 [![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-resource-settings/main.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-resource-settings)
 
