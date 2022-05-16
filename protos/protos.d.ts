@@ -92,21 +92,21 @@ export namespace google {
                 namespace ResourceSettingsService {
 
                     /**
-                     * Callback as used by {@link google.cloud.resourcesettings.v1.ResourceSettingsService#listSettings}.
+                     * Callback as used by {@link google.cloud.resourcesettings.v1.ResourceSettingsService|listSettings}.
                      * @param error Error, if any
                      * @param [response] ListSettingsResponse
                      */
                     type ListSettingsCallback = (error: (Error|null), response?: google.cloud.resourcesettings.v1.ListSettingsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.resourcesettings.v1.ResourceSettingsService#getSetting}.
+                     * Callback as used by {@link google.cloud.resourcesettings.v1.ResourceSettingsService|getSetting}.
                      * @param error Error, if any
                      * @param [response] Setting
                      */
                     type GetSettingCallback = (error: (Error|null), response?: google.cloud.resourcesettings.v1.Setting) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.resourcesettings.v1.ResourceSettingsService#updateSetting}.
+                     * Callback as used by {@link google.cloud.resourcesettings.v1.ResourceSettingsService|updateSetting}.
                      * @param error Error, if any
                      * @param [response] Setting
                      */
@@ -3495,6 +3495,9 @@ export namespace google {
             /** FieldOptions lazy */
             lazy?: (boolean|null);
 
+            /** FieldOptions unverifiedLazy */
+            unverifiedLazy?: (boolean|null);
+
             /** FieldOptions deprecated */
             deprecated?: (boolean|null);
 
@@ -3531,6 +3534,9 @@ export namespace google {
 
             /** FieldOptions lazy. */
             public lazy: boolean;
+
+            /** FieldOptions unverifiedLazy. */
+            public unverifiedLazy: boolean;
 
             /** FieldOptions deprecated. */
             public deprecated: boolean;
